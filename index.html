@@ -9,11 +9,53 @@
 <body>
   <nav class="nav">
     <a class="brand" href="index.html">Daily Update</a>
+    <span id="nav-date"></span>
   </nav>
+
   <main>
-    <h1>Today's Update</h1>
-    <p class="dateline">By Alex Brown</p>
-    <div class="placeholder">Today's update goes here.</div>
+    <p id="status" class="placeholder">Loading today's update…</p>
+
+    <div id="content" hidden>
+      <section class="quote">
+        <blockquote id="quote-text"></blockquote>
+        <p id="quote-author"></p>
+      </section>
+
+      <section>
+        <h2>Daily Knowledge</h2>
+        <h3 id="dk-title"></h3>
+        <p id="dk-text"></p>
+        <p><a id="dk-video" class="button" target="_blank" rel="noopener"></a></p>
+      </section>
+
+      <section>
+        <h2>Today's Reminders</h2>
+        <p class="journey">You are on a self-improvement journey. Every day you show up is a day you get better. Today, you need to:</p>
+        <ul id="checklist" class="checklist"></ul>
+        <p id="progress" class="muted"></p>
+      </section>
+
+      <section>
+        <h2>Financial</h2>
+        <h3>U.S. Market Pulse</h3>
+        <p id="mk-us"></p>
+        <h3>Global Market Pulse</h3>
+        <p id="mk-global"></p>
+        <h3>Stocks of the Day</h3>
+        <div id="stocks" class="stocks"></div>
+      </section>
+
+      <section>
+        <h2>The Big Story</h2>
+        <h3 id="bs-headline"></h3>
+        <p id="bs-text"></p>
+        <p><a id="bs-link" class="button" target="_blank" rel="noopener"></a></p>
+      </section>
+
+      <p id="updated" class="muted"></p>
+    </div>
   </main>
+
+  <script src="assets/app.js"></script>
 </body>
 </html>
