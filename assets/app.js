@@ -62,7 +62,9 @@ function renderChecklist(date) {
       update();
     });
     label.append(box, el("span", "", text));
-    list.append(el("li")).append(label);
+    const li = el("li");
+    li.append(label);
+    list.append(li);
   });
   update();
 }
