@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-29",
+  "quote": {
+    "text": "The impediment to action advances action. What stands in the way becomes the way.",
+    "author": "Marcus Aurelius",
+    "from": "Meditations"
+  },
+  "daily_knowledge": {
+    "title": "Black Tuesday: October 29, 1929",
+    "text": "On this day in 1929 the New York Stock Exchange collapsed in a wave of panic selling, one day after a roughly 13% drop on Black Monday. The Dow fell about 12% on Black Tuesday, and trading volume was far above anything the exchange had seen. Many investors had bought stocks on margin, so falling prices triggered demands for cash that forced even more selling. The slide did not stop that week: the Dow finally bottomed at 41.22 in the summer of 1932, about 89% below its peak, and the crash became the symbol of the start of the Great Depression.",
+    "video_title": "The 1929 Stock Market Crash and the Great Depression: How It Unfolded (Ryan O'Connell, CFA, FRM)",
+    "video_url": "https://www.youtube.com/watch?v=EumYreFPaQA"
+  },
+  "markets": {
+    "us": "Wall Street closed higher on Wednesday, October 28, after the Federal Reserve held its benchmark rate at 3.75% to 4.00%. The S&P 500 finished near 7,744 (up about 0.3%, its third straight gain), the Nasdaq near 26,550 and the Dow near 52,475, each up roughly 0.2% to 0.3%. Oracle surged and Microsoft rose after hours on its earnings, but Alphabet and Fortinet fell sharply after their reports, and Nasdaq futures were down about 1% early Thursday.",
+    "global": "European shares were modestly higher in early trading Thursday, with the STOXX 600 up about 0.5% and France and Germany leading, ahead of the European Central Bank's next decision. Asian markets were mixed; Japan's Nikkei rose about 0.6% early. South Korea's Kospi had jumped 6.6% to about 6,012 in the prior session, led by chipmaker SK Hynix."
+  },
+  "stocks": {
+    "small_cap": {
+      "ticker": "MAX",
+      "company": "MediaAlpha",
+      "market_cap": "about $717M",
+      "what_they_do": "An insurance marketing platform that connects insurance carriers, who buy advertising, with publishers and agents that generate consumer leads.",
+      "why_notable": "It reported third-quarter results on October 28 that beat estimates by a wide margin: adjusted EPS of $0.46 against $0.27 expected, and revenue of $375.9 million (up 23%) against about $348 million expected. The stock rose about 19% after hours, from a $11.72 close to roughly $13.99.",
+      "more": "Q4 revenue guidance is $355 to $375 million, and full-year free cash flow guidance of $90 to $100 million was reiterated. After-hours moves can change at the open."
+    },
+    "mid_cap": {
+      "ticker": "LSTR",
+      "company": "Landstar System",
+      "market_cap": "roughly $4B to $5B",
+      "what_they_do": "An asset-light freight and logistics company that matches shippers with a network of independent truck owner-operators and other capacity.",
+      "why_notable": "After reporting third-quarter results on October 27, the stock fell about 18% on October 28 (per StockTitan), one of the day's biggest losers. Coverage describes lower sales and net income than a year ago and margin pressure despite a freight rebound.",
+      "more": "Shares were around $130, down roughly 24% so far this year, per Simply Wall St. I could not confirm the exact earnings figures from a second source."
+    },
+    "large_cap": {
+      "ticker": "GOOGL",
+      "company": "Alphabet (Google)",
+      "market_cap": "over $10B (mega-cap)",
+      "what_they_do": "Google's parent company: Search, YouTube, Android, Google Cloud and the self-driving unit Waymo.",
+      "why_notable": "Shares fell about 10.8% after hours following its third-quarter report. Google Cloud revenue rose 103% to $30.7 billion, but search revenue growth slowed to 12% from 17% last quarter, and capital spending more than doubled to $51.4 billion.",
+      "more": "Microsoft rose about 4.9% after hours on 19% revenue growth and Azure growth of 48%, so the market is rewarding AI spending that shows up in cloud growth and punishing it elsewhere. After-hours moves can change at the open."
+    }
+  },
+  "big_story": {
+    "headline": "Fed holds rates at 3.75% to 4.00%, but two officials wanted a hike",
+    "summary": "The Federal Reserve left its benchmark interest rate unchanged on Wednesday in a 10-2 vote. Governor Lisa Cook and Beth Hammack dissented in favor of raising rates, which signals that inflation is still the Fed's main worry after its September hike, the first since 2023. Stocks still closed higher, the first time since December 2025 that the S&P 500 rose on a Fed decision day, but traders are now pricing a high chance of another hike at the December 8-9 meeting.",
+    "source": "CNN",
+    "url": "https://www.cnn.com/2026/10/28/business/live-news/federal-reserve-interest-rate-october"
+  },
+  "updated": "2026-10-29 (written by hand; automatic daily updates start tomorrow at 7:00 AM Central)",
+  "history": [
+    "The impediment to action advances action. What stands in",
+    "Black Tuesday: October 29, 1929"
+  ]
+}
