@@ -1,0 +1,65 @@
+name: Daily update
+
+on:
+  schedule:
+    # 7:00 AM Central is 12:00 UTC in summer and 13:00 UTC in winter. Both run;
+    # the guard below lets only the one at or after 7:00 Central do the work.
+    - cron: "0 12 * * *"
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild even if today's page already exists"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+
+jobs:
+  brew:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide whether to run
+        id: guard
+        run: |
+          hour=$(TZ=America/Chicago date +%H)
+          today=$(TZ=America/Chicago date +%F)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$hour" -lt 7 ]; then
+            echo "Before 7:00 AM Central; skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          elif grep -q "\"date\": \"$today\"" data/today.json 2>/dev/null; then
+            echo "Today's page already exists; skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.guard.outputs.run == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Write today's update
+        if: steps.guard.outputs.run == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          pip install anthropic
+          python scripts/brew.py
+
+      - name: Commit and push
+        if: steps.guard.outputs.run == 'true'
+        run: |
+          git config user.name "daily-update-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/today.json
+          git commit -m "Daily update for $(TZ=America/Chicago date +%F)" || exit 0
+          git push
